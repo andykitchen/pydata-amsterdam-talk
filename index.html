@@ -1,40 +1,117 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Promptly Evaluating Prompts</h1>
+        </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+        <section>
+          <section>
+            <h1>Bayesian Touraments</h1>
+          </section>
+          <section>
+            <h2>Problem</h2>
+            <ul>
+              <li>Paired Comparisons</li>
+              <li>Noisy Outcomes</li>
+              <li>Transitivity</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Solution</h2>
+            <ul>
+              <li>GlickBest Algorithm (Novel!)</li>
+              <li>Glicko Ratings</li>
+              <li>Exploration Maxx'ing</li>
+            </ul>
+          </section>
+        </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+        <section>
+          <section>
+            <h1>Glicko</h1>
+          </section>
+          <section>
+            <h2>Glicko</h2>
+            <ul>
+              <li>Rating $(1500)$</li>
+              <li>Ratings Deviation $(1500 ± 50)$</li>
+              <li>Bradley Terry Model</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Bradley Terry Model</h2>
+              \[\begin{aligned}
+  \text{odds} &amp; = 10^{\frac{r_j - r_i}{400}} \\
+  \end{aligned} \]
+          </section>
+          <section>
+            <h2>Who Wins?</h2>
+            <table>
+              <thead>
+                <tr>
+                    <td>Rating Δ
+                    <td>Odds
+                    <td>Win%
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>+100<td>9:5  <td>64%</tr>
+                <tr><td>+200<td>16:5 <td>76%</tr>
+                <tr><td>+400<td>10:1 <td>91%</tr>
+                <tr><td>+800<td>100:1<td>99%</tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Pure Exploration</h1>
+          </section>
+        </section>
+
+        <section>
+          <h1>Comparisons</h1>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/math/math.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealNotes,
+          RevealMath.KaTeX,
+        ]
+      });
+    </script>
+  </body>
 </html>

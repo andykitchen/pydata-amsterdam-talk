@@ -23,7 +23,7 @@ $headingColor: #fff;
 
 $mainFontSize: 42px;
 $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
-$headingFont: 'Yeseva One', cursive;
+$headingFont: 'Bungee', cursive;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
@@ -44,3 +44,10 @@ $heading4Size: 1.0em;
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+.script {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 60%;
+  text-transform: none;
+  display: block;
+}

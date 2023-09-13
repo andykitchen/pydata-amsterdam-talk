@@ -366,7 +366,7 @@ h1, h2 {
   text-transform: none;
   display: block;
   text-shadow: none;
-  color: white;
+  color: #cdcdff;
   margin-bottom: -15px;
-  text-shadow: 0 1px 0 #7373ff, 0 2px 0 #5555ff, 0 3px 0 #3232ff, 0 4px 0 #2323ff, 0 5px 0 blue;
+  text-shadow: 0 1px 0 #7373ff, 0 2px 0 #5555ff, 0 3px 0 #3232ff, 0 4px 0 #2323ff, 0 5px 0 blue, 0 0 5px #2323ff;
 }

@@ -357,6 +357,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
 }
 h1, h2, h3, h4 {
   line-height: 1;
+  text-shadow: 0 1px 0 #c9c9c9, 0 2px 0 #bbb, 0 3px 0 #b9b9b9, 0 4px 0 #aaa, 0 5px 0 rgba(0, 0, 0, 0.09), 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15) !important;
 }
 
 .script {
@@ -365,4 +366,7 @@ h1, h2, h3, h4 {
   text-transform: none;
   display: block;
   text-shadow: none;
+  color: white;
+  margin-bottom: -15px;
+  text-shadow: 0 1px 0 #7373ff, 0 2px 0 #5555ff, 0 3px 0 #3232ff, 0 4px 0 #2323ff, 0 5px 0 blue;
 }
